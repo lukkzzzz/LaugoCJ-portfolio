@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Interior Design Projects by Christine Joy M. Laugo">
+    <title>Correlation | Christine Joy M. Laugo - Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#d946a6'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .burger-line {
+            transition: all 0.3s ease-in-out;
+        }
+        .burger.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+        .burger.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .burger.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+    </style>
+</head>
+<body class="bg-white text-primary antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/98 backdrop-blur-xl z-50 border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="inline-block" aria-label="Christine Joy M. Laugo - Home">
+                        <img src="assets/yeh.png" alt="CJML Logo" class="h-8 sm:h-10 object-contain">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 font-medium text-sm uppercase tracking-wide hover:text-primary transition-colors relative group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="text-gray-600 font-medium text-sm uppercase tracking-wide hover:text-primary transition-colors relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="projects.html" class="text-primary font-medium text-sm uppercase tracking-wide hover:text-secondary transition-colors relative group">
+                        Projects
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
+                    </a>
+                </div>
+
+                <!-- Mobile Burger Button -->
+                <button class="md:hidden burger flex flex-col space-y-1.5 p-2" id="burgerBtn">
+                    <span class="burger-line block w-6 h-0.5 bg-primary"></span>
+                    <span class="burger-line block w-6 h-0.5 bg-primary"></span>
+                    <span class="burger-line block w-6 h-0.5 bg-primary"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden mobile-menu fixed top-20 left-0 w-full h-[50vh] overflow-y-auto bg-white border-t border-gray-100 shadow-lg" id="mobileMenu">
+            <div class="flex flex-col space-y-6 p-8">
+                <a href="index.html" class="text-gray-600 font-medium text-lg uppercase tracking-wide hover:text-primary transition-colors py-2 border-b border-gray-100">Home</a>
+                <a href="about.html" class="text-gray-600 font-medium text-lg uppercase tracking-wide hover:text-primary transition-colors py-2 border-b border-gray-100">About</a>
+                <a href="projects.html" class="text-primary font-medium text-lg uppercase tracking-wide hover:text-secondary transition-colors py-2 border-b border-gray-100">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-primary mb-2">CORRELATION PLATES</h1>
+        </div>
+    </section>
+
+    <!-- Digital Collections Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <!-- Left Column - Images -->
+                <div class="lg:col-span-2">
+                    <div class="grid grid-cols-2 gap-4 auto-rows-[280px]">
+                        <!-- Top Large Image -->
+                        <div class="relative group col-span-2 rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 Urban and Regional Planning  Housing/10111.jpg" alt="Main Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <!-- Kitchen - Left -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 Urban and Regional Planning  Housing/LAUGO.jpg" alt="Kitchen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Bedroom - Right -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 Urban and Regional Planning  Housing/LAUGO (2).jpg" alt="Bedroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Living Room - Left -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 Urban and Regional Planning  Housing/LAUGO (3).jpg" alt="Living Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Family Room - Right -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 Urban and Regional Planning  Housing/LAUGO (4).jpg" alt="Family Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 Urban and Regional Planning  Housing/LAUGO (5).jpg" alt="Family Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 Urban and Regional Planning  Housing/LAUGO (7).jpg" alt="Family Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <!-- Right Column - Text -->
+                <div class="lg:col-span-1">
+                    <h2 class="text-5xl lg:text-6xl font-display font-bold text-primary mb-6">Urban & Regional Planning / Housing</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-4">Correlation Reporting 1</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <!-- Left Column - Images -->
+                <div class="lg:col-span-2">
+                    <div class="grid grid-cols-2 gap-4 auto-rows-[280px]">
+                        <!-- Top Large Image -->
+                        <div class="relative group col-span-2 rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 - CO2 Report Presentation/COVER PAGE 3.jpg" alt="Main Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <!-- Kitchen - Left -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 - CO2 Report Presentation/LAUGO.jpg" alt="Kitchen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Bedroom - Right -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 - CO2 Report Presentation/LAUGO (2).jpg" alt="Bedroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Living Room - Left -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 - CO2 Report Presentation/LAUGO (3).jpg" alt="Living Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Family Room - Right -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 - CO2 Report Presentation/LAUGO (4).jpg" alt="Family Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/Group 3 - CO2 Report Presentation/LAUGO (5).jpg" alt="Family Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column - Text -->
+                <div class="lg:col-span-1">
+                    <h2 class="text-5xl lg:text-6xl font-display font-bold text-primary mb-6">Design & Planning: Educational, Healthcare, Cultural and Entertainment</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-4">Correlation Reporting 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <!-- Left Column - Images -->
+                <div class="lg:col-span-2">
+                    <div class="grid grid-cols-2 gap-4 auto-rows-[280px]">
+                        <!-- Top Large Image -->
+                        <div class="relative group col-span-2 rounded-3xl overflow-hidden">
+                            <img src="assets/MAPUA BASKETBALL DORMITORY PROPOSED DESIGN/1.jpg" alt="Main Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <!-- Kitchen - Left -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/MAPUA BASKETBALL DORMITORY PROPOSED DESIGN/22.jpg" alt="Kitchen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Bedroom - Right -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/MAPUA BASKETBALL DORMITORY PROPOSED DESIGN/23.jpg" alt="Bedroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Right Column - Text -->
+                <div class="lg:col-span-1">
+                    <h2 class="text-5xl lg:text-6xl font-display font-bold text-primary mb-6">Athletes Quarters: Rendering</h2>
+                    <h2 class="text-2xl lg:text-3xl font-display font-bold text-primary mb-6">Correlation Reporting 2</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <!-- Left Column - Images -->
+                <div class="lg:col-span-2">
+                    <div class="grid grid-cols-2 gap-4 auto-rows-[280px]">
+                        <!-- Top Large Image -->
+                        <div class="relative group col-span-2 rounded-3xl overflow-hidden">
+                            <img src="assets/CORREL PLATES/22.png" alt="Main Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+
+                        <!-- Kitchen - Left -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/CORREL PLATES/23.png" alt="Kitchen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+
+                        <!-- Bedroom - Right -->
+                        <div class="relative group rounded-3xl overflow-hidden">
+                            <img src="assets/1011.png" alt="Bedroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Right Column - Text -->
+                <div class="lg:col-span-1">
+                    <h2 class="text-5xl lg:text-6xl font-display font-bold text-primary mb-6">Philippine Creatives Industry Month</h2>
+                    <h2 class="text-2xl lg:text-3xl font-display font-bold text-primary mb-6">Correlation Reporting 3</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-12 border-t border-gray-800">
+        <p class="text-sm">&copy; 2025 Christine Joy M. Laugo. All rights reserved. | Designed with passion for architectural excellence.</p>
+    </footer>
+
+    <!-- Go Up & Back buttons -->
+    <div class="fixed right-4 bottom-4 flex flex-col gap-3 z-50">
+        <button id="backBtn" class="bg-white text-primary shadow-lg rounded-full p-3 w-12 h-12 flex items-center justify-center hover:bg-gray-100" title="Back">
+            ←
+        </button>
+        <button id="topBtn" class="bg-white text-primary shadow-lg rounded-full p-3 w-12 h-12 flex items-center justify-center hover:bg-gray-100" title="Go to top">
+            ↑
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('topBtn').addEventListener('click', function(){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        document.getElementById('backBtn').addEventListener('click', function(){
+            if (history.length > 1) history.back();
+            else window.location.href = 'index.html';
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

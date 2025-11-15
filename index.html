@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christine Joy M. Laugo - Professional Architect Portfolio - Designing Tomorrow's Spaces">
+    <title>Home | Christine Joy M. Laugo - Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a0a0a',
+                        secondary: '#c9a961',
+                        accent: '#d4af37',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+        .animate-fadeInUp-delay-1 {
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+        .animate-fadeInUp-delay-2 {
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+        .animate-fadeInUp-delay-3 {
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .burger-line {
+            transition: all 0.3s ease;
+        }
+        .burger.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .burger.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .burger.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    </style>
+</head>
+<body class="bg-white text-primary antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/98 backdrop-blur-xl z-50 border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="inline-block" aria-label="Christine Joy M. Laugo - Home">
+                        <img src="assets/yeh.png" alt="CJML Logo" class="h-8 sm:h-10 object-contain">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium text-sm uppercase tracking-wide hover:text-secondary transition-colors relative group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
+                    </a>
+                    <a href="about.html" class="text-gray-600 font-medium text-sm uppercase tracking-wide hover:text-primary transition-colors relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="projects.html" class="text-gray-600 font-medium text-sm uppercase tracking-wide hover:text-primary transition-colors relative group">
+                        Projects
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </div>
+
+                <!-- Mobile Burger Button -->
+                <button class="md:hidden burger flex flex-col space-y-1.5 p-2" id="burgerBtn">
+                    <span class="burger-line block w-6 h-0.5 bg-primary"></span>
+                    <span class="burger-line block w-6 h-0.5 bg-primary"></span>
+                    <span class="burger-line block w-6 h-0.5 bg-primary"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden mobile-menu fixed top-20 left-0 w-full h-[50vh] overflow-y-auto bg-white border-t border-gray-100 shadow-lg" id="mobileMenu">
+            <div class="flex flex-col space-y-6 p-8">
+                <a href="index.html" class="text-primary font-medium text-lg uppercase tracking-wide hover:text-secondary transition-colors py-2 border-b border-gray-100">Home</a>
+                <a href="about.html" class="text-gray-600 font-medium text-lg uppercase tracking-wide hover:text-primary transition-colors py-2 border-b border-gray-100">About</a>
+                <a href="projects.html" class="text-gray-600 font-medium text-lg uppercase tracking-wide hover:text-primary transition-colors py-2 border-b border-gray-100">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" style="background-image: url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-black/40"></div>
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.05) 0%, transparent 50%);"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 leading-tight tracking-tight animate-fadeInUp drop-shadow-lg">
+                ARCHITECTURAL DESIGN & PLANNING PORTFOLIO
+            </h1>
+            <p class="text-xl sm:text-2xl text-white font-display mb-6 animate-fadeInUp-delay-1 drop-shadow-md">Christine Joy M. Laugo</p>
+            
+            <div class="animate-fadeInUp-delay-3">
+                <a href="projects.html" class="inline-block bg-primary text-white px-8 py-4 uppercase tracking-wider font-semibold text-sm hover:bg-secondary transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group">
+                    <span class="relative z-10">View About Me!</span>
+                    <span class="absolute inset-0 bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+            <span class="text-2xl text-secondary opacity-60">↓</span>
+        </div>
+    </section>
+
+    <!-- Featured Projects Preview -->
+    <section class="py-20 sm:py-24 lg:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-center text-primary mb-4">Featured Work</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg">A curated selection of recent architectural achievements</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+                <!-- Project 1 -->
+                <div class="bg-white border border-gray-200 overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="assets/1011.png" alt="Urban Living Spaces" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-primary mb-3">Manual Plate</h3>
+                        
+                        
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white border border-gray-200 overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="assets/duyan.png" alt="Innovation Center" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-primary mb-3">Digital Plate</h3>
+                        
+                        
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white border border-gray-200 overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="assets/sara.jpg" alt="Community Arts Hub" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-primary mb-3">Correlation Plates</h3>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="projects.html" class="inline-block bg-primary text-white px-8 py-4 uppercase tracking-wider font-semibold text-sm hover:bg-secondary transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-12 border-t border-gray-800">
+        <p class="text-sm">&copy; 2025 Christine Joy M. Laugo. All rights reserved. | Designed with passion for architectural excellence.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
